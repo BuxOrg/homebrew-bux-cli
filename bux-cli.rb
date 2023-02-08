@@ -6,20 +6,20 @@ class BuxCli < Formula
   desc "CLI app for interacting with BUX
 "
   homepage "https://github.com/BuxOrg/bux-cli"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.0/bux-cli_macOS_arm64.tar.gz"
-      sha256 "e1ecaf37e9d100f9ccd98b0099d81e6448a244d324f001628abce738c3b5ba47"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_macOS_arm64.tar.gz"
+      sha256 "84224502076e4b4057c5f7e25557b1660bc446df0de25a9cc70973e2ee0c852a"
 
       def install
         bin.install "buxcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.0/bux-cli_macOS_64-bit.tar.gz"
-      sha256 "b8669378d1e75b83a39b8cc548997eb4441ccf8f43eaf716eaddc802a4ca1d06"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_macOS_64-bit.tar.gz"
+      sha256 "1a5a47ae71a360b44346b43c3c5c18f19c44a4faa8c05caac3dd717387e2619d"
 
       def install
         bin.install "buxcli"
@@ -28,17 +28,17 @@ class BuxCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.0/bux-cli_Linux_arm64.tar.gz"
-      sha256 "23492a492804a8def572a791c7094af25d6d4e8c4feddee819383508df70515f"
+    if Hardware::CPU.intel?
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_Linux_64-bit.tar.gz"
+      sha256 "68c4e45f164a6643ec6b806de9df468b6298443d9bbceecea29d4df165024117"
 
       def install
         bin.install "buxcli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.0/bux-cli_Linux_64-bit.tar.gz"
-      sha256 "9e14b74cb11eac7bf378597fdf3092db9b64d702a484fc38b531115978d39bfb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_Linux_arm64.tar.gz"
+      sha256 "8ae7258e44e1eadcdb13a3538f55e0199c3453264f133ab5830015ffc5ed8f88"
 
       def install
         bin.install "buxcli"
