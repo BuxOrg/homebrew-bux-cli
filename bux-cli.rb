@@ -6,20 +6,20 @@ class BuxCli < Formula
   desc "CLI app for interacting with BUX
 "
   homepage "https://github.com/BuxOrg/bux-cli"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_macOS_arm64.tar.gz"
-      sha256 "84224502076e4b4057c5f7e25557b1660bc446df0de25a9cc70973e2ee0c852a"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.2/bux-cli_macOS_arm64.tar.gz"
+      sha256 "9afa7dd9394c2c2c84a65db2149073f707614fb271153ac27eeed2cdf3b008b1"
 
       def install
         bin.install "buxcli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_macOS_64-bit.tar.gz"
-      sha256 "1a5a47ae71a360b44346b43c3c5c18f19c44a4faa8c05caac3dd717387e2619d"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.2/bux-cli_macOS_64-bit.tar.gz"
+      sha256 "7823ba072a15726d17e2556bd09f6c62b1911b0523cec50516baeed1d0b29a19"
 
       def install
         bin.install "buxcli"
@@ -29,16 +29,16 @@ class BuxCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_Linux_64-bit.tar.gz"
-      sha256 "68c4e45f164a6643ec6b806de9df468b6298443d9bbceecea29d4df165024117"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.2/bux-cli_Linux_64-bit.tar.gz"
+      sha256 "f40d2d4d178f60dd296529a227313409f492f3a492047f2da995056830b34f13"
 
       def install
         bin.install "buxcli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.1/bux-cli_Linux_arm64.tar.gz"
-      sha256 "8ae7258e44e1eadcdb13a3538f55e0199c3453264f133ab5830015ffc5ed8f88"
+      url "https://github.com/BuxOrg/bux-cli/releases/download/v0.1.2/bux-cli_Linux_arm64.tar.gz"
+      sha256 "417265342241bc9bc2cf2b6a18594488d5fdbfb55b420e196bc12ae7d0c4beb1"
 
       def install
         bin.install "buxcli"
